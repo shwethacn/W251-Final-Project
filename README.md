@@ -16,11 +16,18 @@ Using a person’s Alexa device or app, he/she asks Alexa “Alexa! What do you 
 
 ![overall_arch](https://github.com/shwethacn/W251-Final-Project/blob/master/imgs/overall_arch.JPG)
 
-## Edge Architecture:
-
 ![edge_arch](https://github.com/shwethacn/W251-Final-Project/blob/master/imgs/edge_arch.JPG)
 
 ## Dataset:
+VizWiz-Captions dataset was curated by University of Texas, Austin by sourcing pictures taken from the visually impaired and captioning them using Amazon Mechanical Turk.
+The dataset consists of over 40k images with captions ranging from 1- 5 captions per image. 
+
+The Exploratory Data Analysis(EDA) of the dataset along with the file downloads can be found under: [VizWiz_EDA.ipynb](https://github.com/shwethacn/W251-Final-Project/tree/master/EDA)
+
+## Image Captioning Models:
+We explored some of the popular amongst past and present State-of-the-Art Image Captioning Architectures and techniques to shortlist the models which we will run our experiments with modeling the captioning system on the VizWiz-Captions dataset.
+
+After understanding the encoder-decoder architecture using Show and Tell architecture, we explored the [Attention-on-Attention Net](https://arxiv.org/pdf/1908.06954.pdf) and [Show, Attend and Tell](https://arxiv.org/abs/1502.03044) architectures.
 
 
 
