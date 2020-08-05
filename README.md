@@ -6,11 +6,12 @@
 ## Goal:
 Design and implement a voice activated image captioning system on the [VizWiz-Captions dataset](https://vizwiz.org/tasks-and-datasets/image-captioning) harnessing the power of Edge and Cloud Computing.
 
-<b>Paper:</b> 
-<b>Presentation:</b>
+#### Paper: 
+
+#### Presentation:
 
 ## Abstract:
-Using a person’s Alexa device or app, he/she asks Alexa “Alexa! What do you see?” while pointing his/her cellphone to an object or scene that needs captioning.  Alexa then interacts with edge device(Jetson TX2) to get the picture from camera. Jetson then uses an image captioning model trained on the cloud to generate a caption for the picture. Jetson sends the caption text back to Alexa which is then told aloud to the user. 
+Using a person’s Alexa device or app, he/she asks Alexa <i>“Alexa! What do you see?”</i> while pointing his/her cellphone to an object or scene that needs captioning.  Alexa then interacts with edge device(Jetson TX2) to get the picture from camera. Jetson then uses an image captioning model trained on the cloud to generate a caption for the picture. Jetson sends the caption text back to Alexa which is then told aloud to the user. 
 
 ## Overall Architecture:
 
@@ -37,6 +38,8 @@ The code for the model implementations can be found here:
 ## Evaluation Results:
 
 The results of the inference on <b>test</b> split is tabulated below. The evaluation is based on [CIDEr-D](https://arxiv.org/abs/1411.5726) score.
+
+![Inference Results](https://github.com/shwethacn/W251-Final-Project/blob/master/imgs/inference_results.JPG)
 
 #### Examples of Generated Captions:
 
