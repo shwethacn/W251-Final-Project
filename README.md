@@ -27,7 +27,35 @@ The Exploratory Data Analysis(EDA) of the dataset along with the file downloads 
 ## Image Captioning Models:
 We explored some of the popular amongst past and present State-of-the-Art Image Captioning Architectures and techniques to shortlist the models which we will run our experiments with modeling the captioning system on the VizWiz-Captions dataset.
 
-After understanding the encoder-decoder architecture using Show and Tell architecture, we explored the [Attention-on-Attention Net](https://arxiv.org/pdf/1908.06954.pdf) and [Show, Attend and Tell](https://arxiv.org/abs/1502.03044) architectures.
+After understanding the encoder-decoder architecture using Show and Tell architecture, we explored the [Attention-on-Attention Net](https://arxiv.org/abs/1908.06954) and [Show, Attend and Tell](https://arxiv.org/abs/1502.03044) architectures.
+
+The code for the model implementations can be found here:
+
+* [Attention-on-Attention Net](https://github.com/shwethacn/W251-Final-Project/tree/master/AoA)
+* [Show, Attend and Tell](https://github.com/shwethacn/W251-Final-Project/tree/master/Show_Attend_Tell)
+
+## Evaluation Results:
+
+The results of the inference on <b>test</b> split is tabulated below. The evaluation is based on [CIDEr-D](https://arxiv.org/abs/1411.5726) score.
+
+#### Examples of Generated Captions:
+
+## Edge Inference:
+
+We used the Show, Attend and Tell model, trained on VizWiz-Captions and finetuned with MS COCO dataset as the final model for inference on Jetson TX2. Even though the AoA Net models had higher CIDer-D scores, these models were quite dense to be used in Jetson's limited memory and GPU space to obrain an efficient inference mechanism. Moreover the complete image features needed for AoANet could not be extracted using bottom-up extraction. 
+
+Here are the demo videos of the end product in actions:
+
+<b>Insert the video links here </b>
+
+## Conclusion:
+
+The team was successfully able to design and implement an end-to-end system using Cloud for training an image captioning model based on Show , Attend and Tell and successfully use Edge device(Jetson TX2) to do inference to caption images coming from a user’s camera through a voice activated device: Amazon Alexa. The inference time is around: <b>insert time</b>
+
+This could probably be the first such system developed to help the visually impaired using real data sourced from them using the ViZWiz-Captions dataset. 
+
+
+
 
 
 
