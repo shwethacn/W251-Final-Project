@@ -99,7 +99,7 @@ Here the annotation files are preprocessed to remove any pre-canned and rejected
 #### Training:
 The training is first done from scratch using VizWiz-Captions and then fine-tuned using MS COCO dataset.
 
-The training scripts are under the baseline repo but some of the scripts are changed where necessary to change the parameters used for training and can be found [here]https://github.com/shwethacn/W251-Final-Project/tree/master/AoA/scrips)/
+The training scripts are under the baseline repo but some of the scripts are changed where necessary to change the parameters used for training and can be found [here](https://github.com/shwethacn/W251-Final-Project/tree/master/AoA/scrips/).
 
   - 1. Training from scratch(AoA-Scratch Model)
     ```
