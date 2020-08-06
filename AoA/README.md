@@ -48,6 +48,7 @@ Here the annotation files are preprocessed to remove any pre-canned and rejected
           python3 setup.py build develop
           ```
     - 2. Feature Extraction
+    
          Download the Faster R-CNN pretrained model from [here](https://github.com/MILVLG/bottom-up-attention.pytorch/tree/051058d2daee42ffa878e72be6e892ef6e991ef6)(with the caffe k=[10,100] mode) into <i>/inference directory</i>.
          ```
          bottom-up-attention.pytorch/inference$ ls -ltr 
