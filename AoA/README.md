@@ -73,7 +73,7 @@ Here the annotation files are preprocessed to remove any pre-canned and rejected
          ls
          # Following files will be extracted. Tab separated files for train-val and test split
          VizWiz_resnet101_faster_rcnn_genome_test.tsv.1  VizWiz_resnet101_faster_rcnn_genome_trainval.tsv.2  VizWiz_resnet101_faster_rcnn_genome_trainval.tsv.3
-                  
+         ```         
          Once extracted, run the following which will create 3 directories: vizwizbu_fc(objects), vizwizbu_box(bounding boxes), vizwizbu_att(attributes) with files for each image in the dataset.
          ```
          python3 scripts/make_bu_data_vizwiz.py
