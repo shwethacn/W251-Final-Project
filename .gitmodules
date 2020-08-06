@@ -1,0 +1,6 @@
+[submodule "AoA/AoANet_VizWiz"]
+	path = AoA/AoANet_VizWiz
+	url = https://github.com/Yinan-Zhao/AoANet_VizWiz
+[submodule "AoA/bottom-up-attention.pytorch"]
+	path = AoA/bottom-up-attention.pytorch
+	url = https://github.com/MILVLG/bottom-up-attention.pytorch
