@@ -1,4 +1,6 @@
-### PART I : Setup Alexa Developer Account
+# Inference at the EDGE with the NVIDIA Jetson TX2
+
+## PART I : Setup Alexa Developer Account
 
 1. Navigate to https://developer.amazon.com/ and create an account (or use an existing Amazon account)
 2. Select "amazon alexa" --> "Create Alexa Skills" --> "Console" --> "Create Skill"
@@ -37,14 +39,14 @@
 - The first box will be the endpoint you get from PART V, Step 5
 - For the second box, select the option "My development endpoint is a sub-domain of a domain that has a wildcard certificate from a certificate authority"
 
-### PART II : Pre-setup on Jetson TX2
+## PART II : Pre-setup on Jetson TX2
 1. Make sure you have redis installed
 2. Set up a bridge network. The one used here is called `hw03` and is passed into the docker command like `--network hw03`
 3. Identify the IP address of your device. 
 4. Download a RTSP app for your Apple or Android phone/device. Note the RTSP IP address. We will be passing this to OpenCV to capture images.
 5. Open up 3 terminal windows
 
-### PART III : Redis 
+## PART III : Redis 
 
 In the first terminal window ...
 
@@ -54,7 +56,7 @@ In the first terminal window ...
 
 3. Then do `redis-cli` at the prompt
 
-### PART IV : Prediction Model Endpoint (github folder: Edge/prediction.zip)
+## PART IV : Prediction Model Endpoint (github folder: Edge/prediction.zip)
 
 In the second terminal window ...
 
@@ -70,7 +72,7 @@ https://www.dropbox.com/s/32d7qyngv57zly9/prediction.zip?dl=0
 
 5. Once you are in the container, run `python3 main.py`. This will load the model and weights and open the endpoint up at port 5000 for listening.
 
-### PART V : Alexa + Ngrok + OpenCV (github folder: Edge/imagecapture.zip)
+## PART V : Alexa + Ngrok + OpenCV (github folder: Edge/imagecapture.zip)
 
 In the third terminal window ...
 
