@@ -43,6 +43,8 @@ The results of the inference on <b>test</b> split is tabulated below. The evalua
 
 #### Examples of Generated Captions:
 
+![Sample_Captions](https://github.com/shwethacn/W251-Final-Project/blob/master/imgs/sample_test_captions.JPG)
+
 ## Edge Inference:
 
 We used the Show, Attend and Tell model, trained on VizWiz-Captions and finetuned with MS COCO dataset as the final model for inference on Jetson TX2. Even though the AoA Net models had higher CIDer-D scores, these models were quite dense to be used in Jetson's limited memory and GPU space to obrain an efficient inference mechanism. Moreover the complete image features needed for AoANet could not be extracted using bottom-up extraction. 
