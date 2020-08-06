@@ -43,6 +43,8 @@ The results of the inference on <b>test</b> split is tabulated below. The evalua
 
 #### Examples of Generated Captions:
 
+Compares results for AoA(Scratch), AoA(Finetuned) and Show, Attend and Tell(SAT) models. 
+
 ![Sample_Captions](https://github.com/shwethacn/W251-Final-Project/blob/master/imgs/sample_test_captions.JPG)
 
 ## Edge Inference:
