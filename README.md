@@ -63,6 +63,18 @@ The team was successfully able to design and implement an end-to-end system usin
 
 This could probably be the first such system developed to help the visually impaired using real data sourced from them using the ViZWiz-Captions dataset. 
 
+## Acknowledgements:
+
+[VizWiz-Captions baseline repository](https://github.com/Yinan-Zhao/AoANet_VizWiz)
+
+[Bottom-up model](https://github.com/peteanderson80/bottom-up-attention)
+
+[Detectron2 for Caffe](https://github.com/MILVLG/bottom-up-attention.pytorch)
+
+[Image Captioning using TensorFlow](https://www.tensorflow.org/tutorials/text/image_captioning)
+
+
+
 
 
 
