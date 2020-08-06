@@ -1,5 +1,11 @@
 # Inference at the EDGE with the NVIDIA Jetson TX2
 
+The following describes the requirements and setup required to replicate the inference model integrated with Amazon Alexa. You will need the following:
+* Amazon account 
+* Alexa app (can be any Amazon voice activated device like the Echo, an app on a phone/iPad/computer)
+* Jetson TX2 (a Raspberry Pi will not be efficient for inferencing)
+* Knowledge of Web APIs, Python, Docker and Linux commands
+
 ## PART I : Setup Alexa Developer Account
 
 1. Navigate to https://developer.amazon.com/ and create an account (or use an existing Amazon account)
@@ -56,7 +62,7 @@ In the first terminal window ...
 
 3. Then do `redis-cli` at the prompt
 
-## PART IV : Prediction Model Endpoint (github folder: Edge/prediction.zip)
+## PART IV : Prediction Model Endpoint
 
 In the second terminal window ...
 
@@ -72,7 +78,7 @@ https://www.dropbox.com/s/32d7qyngv57zly9/prediction.zip?dl=0
 
 5. Once you are in the container, run `python3 main.py`. This will load the model and weights and open the endpoint up at port 5000 for listening.
 
-## PART V : Alexa + Ngrok + OpenCV (github folder: Edge/imagecapture.zip)
+## PART V : Alexa + Ngrok + OpenCV
 
 In the third terminal window ...
 
