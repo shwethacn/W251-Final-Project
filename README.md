@@ -3,7 +3,7 @@
 
 * <b>Team:</b> Padmavati Sridhar, Shaji Kunjumohamed, Shwetha Chitta Nagaraj
 
-[Paper]() [Presentation](https://github.com/shwethacn/W251-Final-Project/blob/master/docs/W251_Final_Project_Presentation.pdf)
+    [Paper]() [Presentation](https://github.com/shwethacn/W251-Final-Project/blob/master/docs/W251_Final_Project_Presentation.pdf)
 
 
 
