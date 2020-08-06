@@ -112,11 +112,11 @@ The training scripts are under the baseline repo but some of the scripts are cha
     ```
     $ CUDA_VISIBLE_DEVICES=0 sh eval_scratch.sh
     ```
- - 3. The evaluation results are generated under <i>vi</i> directory and is available under [VizWiz_scratch_rl.json](https://github.com/shwethacn/W251-Final-Project/tree/master/AoA/inference).
+ - 3. The evaluation results are generated under <i>vis</i> directory and is available under [VizWiz_scratch_rl.json](https://github.com/shwethacn/W251-Final-Project/tree/master/AoA/inference).
  
    This file is submitted to the competition on [Eval AI server](https://evalai.cloudcv.org/web/challenges/challenge-page/525/my-submission) to get the scoring results.
    
- - 4. Train a fine-tuned model using MS COCO:
+ - 4. Train a fine-tuned model using MS COCO(AoA-FineTuned Model):
    ```
    $ CUDA_VISIBLE_DEVICES=0 sh finetune_vizwiz.sh
    ```
