@@ -3,12 +3,12 @@
 
 * <b>Team:</b> Padmavati Sridhar, Shaji Kunjumohamed, Shwetha Chitta Nagaraj
 
+[Paper]() [Presentation](https://github.com/shwethacn/W251-Final-Project/blob/master/docs/W251_Final_Project_Presentation.pdf)
+
+
+
 ## Goal:
 Design and implement a voice activated image captioning system on the [VizWiz-Captions dataset](https://vizwiz.org/tasks-and-datasets/image-captioning) harnessing the power of Edge and Cloud Computing.
-
-#### Paper: 
-
-#### Presentation:
 
 ## Abstract:
 Using a person’s Alexa device or app, he/she asks Alexa <i>“Alexa! What do you see?”</i> while pointing his/her cellphone to an object or scene that needs captioning.  Alexa then interacts with edge device(Jetson TX2) to get the picture from camera. Jetson then uses an image captioning model trained on the cloud to generate a caption for the picture. Jetson sends the caption text back to Alexa which is then told aloud to the user. 
