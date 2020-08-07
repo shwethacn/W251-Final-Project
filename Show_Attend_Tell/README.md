@@ -203,7 +203,17 @@ These techniques helped us in bringing training time to 6 minutes per epoch. We 
 
 We extensivily used one cycle policy for to find out optimum learning rate. In one cycle policy, it will do a mock training by going over a large range of learning rates, then plot them against the losses. We will pick a value a bit before the minimum, where the loss still improves. We did our training using batches of epochs. After each batch of epochs, the learning rate changes. We ran one cycle policy to find out the optimum learing rate for the next batch. 
 
-![image.png](attachment:73e8e2f3-032a-4c83-888c-da7685ccc0f5.png)
+![Train-Validation Curve](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_train_val_curve.jpg)  
+$\textit{The training validation curve for the first batch of epochs are shown above.}$
+
+![Initial Learing rate setting](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_initial_lr.jpg)
+$\textit{The figure shows the setting for the initial learning rate is shown above. The initial learningrate is set as 1e-03 as the point of steepest descent is}$ $1e-03$
+
+![Second learning rate](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_second_lr.jpg)  
+$\textit{The figure above shows setting up of second learning rate. It is setup as}$ $1e-04$
+
+![No overfitting](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_no_overfitting.jpg)  
+$\textit{The figure above shows that there is no overfitting}$
 
 ## Setting up model for inference
 
