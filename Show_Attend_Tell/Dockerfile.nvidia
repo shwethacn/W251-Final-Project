@@ -1,0 +1,21 @@
+FROM nvcr.io/nvidia/pytorch:19.07-py3
+
+RUN apt-get update --fix-missing && \
+    apt-get install -y rsync  && \
+    apt-get clean
+
+ENV TINI_VERSION v0.16.1
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
+RUN pip install dask
+RUN pip install fasttext
+RUN pip install fastai
+
+RUN chmod +x /usr/bin/tini
+RUN pip install fsspec
+RUN pip install cloudpickle
+RUN pip install "dask[distributed]"
+
+WORKDIR /home
+ENTRYPOINT [ "/usr/bin/tini", "--" ]
+CMD [ "/bin/bash" ]
+  
