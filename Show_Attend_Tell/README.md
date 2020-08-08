@@ -35,7 +35,7 @@ Following tools were used for traing
 
 Since data need to be transferred in and out of machines over the network frequently, an NFS file share server was set up in the cloud. All the files and data was stored in this machine.  Initially "rsync" was used to transfer data. Since "rsync" turned out to be a bit slow, we moved a to a webserver based mechanism. Used "wget" to move data and offered better speed.
 
-| ![Train-Validation Curve](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_cloud_arch.jpg) | 
+| ![Train-Validation Curve](https://github.com/shwethacn/W251-Final-Project/blob/master/Show_Attend_Tell/imgs/251_cloud_arch.jpg) | 
 |:--:| 
 | The The network architecture at the cloud is captured in the above figure. The figure shows a GPU machine with 2T  local SSD and another NFS machine with a 2T SSD, which can be mounted across all machines as an NFS share. All data is stored in NFS machine, which is persistent. The GPU machine can be torn down and built up, based on demand. This methodology is followed to keep costs down. |
 
@@ -185,7 +185,7 @@ if __name__ == '__main__':
 
 refer to the notebook `Prepare_data.ipynb` for more details.
 
-| ![Train-Validation Curve](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_steps.jpg) | 
+| ![Train-Validation Curve](https://github.com/shwethacn/W251-Final-Project/blob/master/Show_Attend_Tell/imgs/251_steps.jpg) | 
 |:--:| 
 | The various steps involved in training in cloud and creating a model for inference at the edge is captured in the above figure |
 
@@ -225,19 +225,19 @@ These techniques helped us in bringing training time to 6 minutes per epoch. We 
 
 We extensivily used one cycle policy for to find out optimum learning rate. In one cycle policy, it will do a mock training by going over a large range of learning rates, then plot them against the losses. We will pick a value a bit before the minimum, where the loss still improves. We did our training using batches of epochs. After each batch of epochs, the learning rate changes. We ran one cycle policy to find out the optimum learing rate for the next batch. 
 
-| ![Train-Validation Curve](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_train_val_curve.jpg) | 
+| ![Train-Validation Curve]https://github.com/shwethacn/W251-Final-Project/blob/master/Show_Attend_Tell/imgs/251_train_val_curve.jpg) | 
 |:--:| 
 | The training validation curve for the first batch of epochs are shown above. |
 
-| ![Initial Learing rate setting](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_initial_lr.jpg) | 
+| ![Initial Learing rate setting](https://github.com/shwethacn/W251-Final-Project/blob/master/Show_Attend_Tell/imgs/251_initial_lr.jpg) | 
 |:--:| 
 | The figure shows the setting for the initial learning rate is (shown above). The initial learningrate is set as 1e-03 as the point of steepest descent is 1e-03 |
 
-| ![Second learning rate](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_second_lr.jpg) | 
+| ![Second learning rate](https://github.com/shwethacn/W251-Final-Project/blob/master/Show_Attend_Tell/imgs/251_second_lr.jpg) | 
 |:--:| 
 | The figure above shows setting up of second learning rate. It is setup as 1e-04 |
 
-| ![No overfitting](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_no_overfitting.jpg) | 
+| ![No overfitting](https://github.com/shwethacn/W251-Final-Project/blob/master/Show_Attend_Tell/imgs/251_no_overfitting.jpg) | 
 |:--:| 
 | The figure above shows that there is no overfitting |
 
