@@ -62,6 +62,8 @@ In the first terminal window ...
 
 3. Then do `redis-cli` at the prompt
 
+![redis](https://github.com/shwethacn/W251-Final-Project/blob/master/imgs/edge_redis.JPG)
+
 ## PART IV : Prediction Model Endpoint
 
 In the second terminal window ...
@@ -77,6 +79,8 @@ https://www.dropbox.com/s/32d7qyngv57zly9/prediction.zip?dl=0
 `docker run -it --rm --name=proj --network hw03 -e REDISURL=$REDISURL --hostname="proj" --link redis1:redis -h redis -p 6379 --runtime nvidia  -p 5000:5000 -v /tmp/.X11-unix/:/tmp/.X11-unix  -v $PWD/models:/work   proj_final:latest`
 
 5. Once you are in the container, run `python3 main.py`. This will load the model and weights and open the endpoint up at port 5000 for listening.
+
+![predictionendpt](https://github.com/shwethacn/W251-Final-Project/blob/master/imgs/edge_predictionendpt.JPG)
 
 ## PART V : Alexa + Ngrok + OpenCV
 
@@ -103,3 +107,5 @@ xhost +
 - Session Status = online
 - Forwarding HTTPS address (i.e something like `https://1316874182e7.ngrok.io `)
 You will enter this ngrok url in the Endpoint box in the Alexa developer skills portal.
+
+![ngrok](https://github.com/shwethacn/W251-Final-Project/blob/master/imgs/edge_ngrok.JPG)
