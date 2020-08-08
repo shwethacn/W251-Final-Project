@@ -23,7 +23,7 @@ Following tools were used for traing
 
 Since data need to be transferred in and out of machines over the network frequently, an NFS file share server was set up in the cloud. All the files and data was stored in this machine.  Initially "rsync" was used to transfer data. Since "rsync" turned out to be a bit slow, we moved a to a webserver based mechanism. Used "wget" to move data and offered better speed.
 
-### Step1 : set up NFS server and client
+### Step1 : Set up NFS server and client
 
 The steps for setting up NFS server client is outlined [here](https://vitux.com/install-nfs-server-and-client-on-ubuntu/). The Client machine here is the v100 GPU machine. This workflow was used to minimize the expenses associated using the machine with GPU. Once the training is done, the GPU machine is cancelled, but data is safely saved in the shared drive. 
 
