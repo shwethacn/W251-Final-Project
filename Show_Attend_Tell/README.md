@@ -3,12 +3,24 @@
 The starter code was taken from this Github repo [baseline code](https://github.com/fg91/Neural-Image-Caption-Generation-Tutorial).  
 
 
+## List of files
+
+* `Dockerfile.nvidia`  
+This file is used to bring up the docker container in the cloud, for training.
+
+* `Prepare_data.ipynb`  
+Notebook used for pre-processing data in the Cloud. 
+
+* `Training_coco_vizwiz_combined.ipynb`   
+Notebook used for training model in the cloud 
+
+
 ## Resources
 
 The training was done on IBM cloud with following resources
 
-* An Ubuntu 18.04 LTS machine with v100 GPU, 8 CPU and 128G RAM, 2T SSD for training.  
-* An Ubuntu 18.04 LTS machine with 2 CPU and 32G RAM, 2T SSD as NFS server
+* An Ubundu 18.04 LTS machine with v100 GPU, 8 CPU and 128G RAM, 2T SSD for training.  
+* An Ubundu 18.04 LTS machine with 2 CPU and 32G RAM, 2T SSD as NFS server
 
 ## Tools
 
@@ -23,7 +35,11 @@ Following tools were used for traing
 
 Since data need to be transferred in and out of machines over the network frequently, an NFS file share server was set up in the cloud. All the files and data was stored in this machine.  Initially "rsync" was used to transfer data. Since "rsync" turned out to be a bit slow, we moved a to a webserver based mechanism. Used "wget" to move data and offered better speed.
 
-### Step1 : Set up NFS server and client
+| ![Train-Validation Curve](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_cloud_arch.jpg) | 
+|:--:| 
+| The The network architecture at the cloud is captured in the above figure. The figure shows a GPU machine with 2T  local SSD and another NFS machine with a 2T SSD, which can be mounted across all machines as an NFS share. All data is stored in NFS machine, which is persistent. The GPU machine can be torn down and built up, based on demand. This methodology is followed to keep costs down. |
+
+### Step1 : set up NFS server and client
 
 The steps for setting up NFS server client is outlined [here](https://vitux.com/install-nfs-server-and-client-on-ubuntu/). The Client machine here is the v100 GPU machine. This workflow was used to minimize the expenses associated using the machine with GPU. Once the training is done, the GPU machine is cancelled, but data is safely saved in the shared drive. 
 
@@ -167,6 +183,12 @@ if __name__ == '__main__':
 
 ```
 
+refer to the notebook `Prepare_data.ipynb` for more details.
+
+| ![Train-Validation Curve](https://raw.githubusercontent.com/shwethacn/W251-Final-Project/master/Show_Attend_Tell/imgs/251_steps.jpg) | 
+|:--:| 
+| The various steps involved in training in cloud and creating a model for inference at the edge is captured in the above figure |
+
 ## Data wrangling, cleaning up and filtering dataset
 
 This step is accomplished by using Dask framework. The Steps are outlined in the notebook Prepare.ipynb available in this folder. All processed data is saved as python pickle files and handed over to downstream processes.
@@ -225,5 +247,3 @@ The inference was attempted on GPU and CPU. It has been observed that prediction
 * For testing the model, it was deployed as a flask service that accepts jpeg images. Images were sent to the model and the model returned corresponding captions.  
 * At the rate of 5 fps, continuous frame per frame inferencing was attempted on a streaming video. The captions were superimposed on top of each frame of video, just like YOLO demo. 
 * We reduced the CNN from Resnet101 to Resnet34 to accommodate the model in Jetson RAM. No degradation in model performance was observed, even though the model became simpler. 
-
-
