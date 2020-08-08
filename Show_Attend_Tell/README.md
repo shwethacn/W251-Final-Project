@@ -225,7 +225,7 @@ These techniques helped us in bringing training time to 6 minutes per epoch. We 
 
 We extensivily used one cycle policy for to find out optimum learning rate. In one cycle policy, it will do a mock training by going over a large range of learning rates, then plot them against the losses. We will pick a value a bit before the minimum, where the loss still improves. We did our training using batches of epochs. After each batch of epochs, the learning rate changes. We ran one cycle policy to find out the optimum learing rate for the next batch. 
 
-| ![Train-Validation Curve]https://github.com/shwethacn/W251-Final-Project/blob/master/Show_Attend_Tell/imgs/251_train_val_curve.jpg) | 
+| ![Train-Validation Curve](https://github.com/shwethacn/W251-Final-Project/blob/master/Show_Attend_Tell/imgs/251_train_val_curve.jpg) | 
 |:--:| 
 | The training validation curve for the first batch of epochs are shown above. |
 
