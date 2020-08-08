@@ -7,8 +7,8 @@ The starter code was taken from this Github repo [baseline code](https://github.
 
 The training was done on IBM cloud with following resources
 
-* An Ubundu 18.04 LTS machine with v100 GPU, 8 CPU and 128G RAM, 2T SSD for training.  
-* An Ubundu 18.04 LTS machine with 2 CPU and 32G RAM, 2T SSD as NFS server
+* An Ubuntu 18.04 LTS machine with v100 GPU, 8 CPU and 128G RAM, 2T SSD for training.  
+* An Ubuntu 18.04 LTS machine with 2 CPU and 32G RAM, 2T SSD as NFS server
 
 ## Tools
 
