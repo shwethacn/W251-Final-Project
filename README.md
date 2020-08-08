@@ -3,7 +3,7 @@
 
 * <b>Team:</b> Padmavati Sridhar, Shaji Kunjumohamed, Shwetha Chitta Nagaraj
 
-    [Technical Paper]()        
+    [Technical Paper](https://github.com/shwethacn/W251-Final-Project/blob/master/docs/w251_whitepaper_alexa.pdf)        
     
     [Presentation](https://github.com/shwethacn/W251-Final-Project/blob/master/docs/W251_Final_Project_Presentation.pdf)
 
@@ -55,7 +55,9 @@ We used the Show, Attend and Tell model, trained on VizWiz-Captions and finetune
 
 Here are the demo videos of the end product in actions:
 
-<b>Insert the video links here </b>
+1. https://youtu.be/IdNFus2YNZQ
+2. https://youtu.be/3g8MxeDQ4Cg
+3. https://youtu.be/7HJAT0qpQac
 
 ## Conclusion:
 
